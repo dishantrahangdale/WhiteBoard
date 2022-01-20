@@ -34,6 +34,21 @@ body{
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     
 }
+
+.scale-tools {
+    animation-name: scale-tools;
+    animation-duration: 1s;
+}
+
+@keyframes scale-tools {
+    0% {
+        transform: scale(0.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 .tools-cont>*{
     display: block;
     width: 2rem;
@@ -47,6 +62,7 @@ body{
     left:25vw;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     border-radius: 1rem;
+    display: none;
 }
 .pen-width-cont{
     /* background-color: green; */
@@ -87,7 +103,7 @@ body{
     background-color: lightblue;
     height: 2rem;
     width: 7rem;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     position: absolute;
@@ -98,4 +114,51 @@ body{
 }
 .eraser-tool-cont input{
     width: 80%;;
+}
+
+.sticky-cont{
+    height: 15rem;
+    width: 15rem;
+    /* background-color: lightpink; */
+    position: absolute;
+    top: 15rem;
+    left: 10rem;
+    display: block;
+}
+.header-cont{
+    height: 2rem;
+    background-color: lightblue;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* display: block; */
+}
+.header-cont>*{
+    height: 1.3rem;
+    width: 1.3rem;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+}
+.minimize{
+    background-color: cyan;
+}
+.remove{
+    background-color: darkmagenta;
+}
+.note-cont{
+    height: calc(100% - 2rem);
+    display: block;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    /* background-color: crimson; */
+}
+.textarea{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    resize: none;
+    border: none;
+}
+img{
+    height: 100%;
+    width: 100%;
 }

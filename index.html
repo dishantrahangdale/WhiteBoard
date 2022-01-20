@@ -12,18 +12,18 @@
     <div class="options-cont">
         <i class="fas fa-bars"></i>
     </div>
-    <div class="tools-cont">
-        <img src="img/Pen.svg" alt="">
-        <img src="img/Eraser.svg" alt="">
-        <img src="img/Download.svg" alt="">
-        <img src="img/Upload.svg" alt="">
-        <img src="img/Sticky.svg" alt="">
-        <img src="img/Redo.svg" alt="">
-        <img src="img/Undo.svg" alt="">
+    <div class="tools-cont scale-tools">
+        <img src="img/Pen.svg" class="pen" alt="">
+        <img src="img/Eraser.svg" class="eraser" alt="">
+        <img src="img/Download.svg" class="download" alt="">
+        <img src="img/Upload.svg" class="upload" alt="">
+        <img src="img/Sticky.svg" class="sticky" alt="">
+        <img src="img/Redo.svg" class="redo" alt="">
+        <img src="img/Undo.svg" class="undo" alt="">
     </div>
     <div class="pen-tool-cont">
         <div class="pen-width-cont">
-            <input type="range"  min="2" max="10" value="3" id="">
+            <input type="range"  min="2" max="10" value="3" class="pen-width">
         </div>
         <div class="pen-color-cont">
             <div class="black pen-color"></div>
@@ -33,8 +33,20 @@
     </div>
 
     <div class="eraser-tool-cont">
-        <input type="range"  min="2" max="10" value="3" id="">
+        <input type="range"  min="2" max="20" value="3" class="eraser-width">
     </div>
+
+    <!-- <div class="sticky-cont">
+        <div class="header-cont">
+            <div class="minimize"></div>
+            <div class="remove"></div>
+        </div>
+        <div class="note-cont">
+            <textarea class="textarea"></textarea>
+        </div>
+    </div> -->
+    <canvas></canvas>
     <script src="./index_js.js"></script>
+    <script src="./canvas.js"></script> 
 </body>
 </html>
