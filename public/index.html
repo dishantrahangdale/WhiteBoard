@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhiteBoard</title>
+    <link rel="stylesheet" href="./index_css.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="options-cont">
+        <i class="fas fa-bars"></i>
+    </div>
+    <div class="tools-cont scale-tools">
+        <img src="img/Pen.svg" class="pen" alt="">
+        <img src="img/Eraser.svg" class="eraser" alt="">
+        <img src="img/Download.svg" class="download" alt="">
+        <img src="img/Upload.svg" class="upload" alt="">
+        <img src="img/Sticky.svg" class="sticky" alt="">
+        <img src="img/Redo.svg" class="redo" alt="">
+        <img src="img/Undo.svg" class="undo" alt="">
+    </div>
+    <div class="pen-tool-cont">
+        <div class="pen-width-cont">
+            <input type="range"  min="2" max="10" value="3" class="pen-width">
+        </div>
+        <div class="pen-color-cont">
+            <div class="black pen-color"></div>
+            <div class="red pen-color"></div>
+            <div class="green pen-color"></div>
+        </div>
+    </div>
+
+    <div class="eraser-tool-cont">
+        <input type="range"  min="2" max="20" value="3" class="eraser-width">
+    </div>
+
+    <!-- <div class="sticky-cont">
+        <div class="header-cont">
+            <div class="minimize"></div>
+            <div class="remove"></div>
+        </div>
+        <div class="note-cont">
+            <textarea class="textarea"></textarea>
+        </div>
+    </div> -->
+    <canvas></canvas>
+    <script src="https://cdn.socket.io/4.4.1/socket.io.min.js" integrity="sha384-fKnu0iswBIqkjxrhQCTZ7qlLHOFEgNkRmK2vaO/LbTZSXdJfAu6ewRBdwHPhBo/H" crossorigin="anonymous"></script>
+    <script>
+        let socket = io.connect("http://localhost:5000");
+    </script>
+    <script src="./index_js.js"></script>
+    <script src="./canvas.js"></script> 
+</body>
+</html>
